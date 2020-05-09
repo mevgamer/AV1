@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -34,7 +35,7 @@ public class CadastroPedido extends AppCompatActivity {
     private float[] valorPedido = {256,10123,402,103,102,101,104,105,106,107,180,910,100,109,108,104,103,102,110,110,120,310,410,105,160,170,810};
     private float verificacao;
     private String valorAtual;
-    private Button salvar;
+    private Button salvarPedido;
 
 
     @Override
@@ -43,10 +44,11 @@ public class CadastroPedido extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro_pedido);
 
         swStatus = findViewById(R.id.sistema);
-        salvar = findViewById(R.id.salvar);
+        salvarPedido = findViewById(R.id.salvar);
         lista = findViewById(R.id.listaPedidos);
         status = findViewById(R.id.status);
         status.setText("Offline");
+
 
 
 
@@ -96,11 +98,11 @@ public class CadastroPedido extends AppCompatActivity {
                                     verificacao = Float.parseFloat(novoValor.getText().toString());
 
                                     if (verificacao == 0){
-                                        Toast.makeText(getApplicationContext(), "Utilize um valor menor que 100!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), "Coloque um valor diferente de '0'!", Toast.LENGTH_LONG).show();
 
                                     } else {
                                         valorPedido[position] = verificacao;
-                                        Toast.makeText(getApplicationContext(), "Taxa do estado de "+ listaPedidos[position] + " alterada para "+ valorPedido[position] + "%", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), "Valod do produto :  "+ listaPedidos[position] + " alterada para "+ valorPedido[position], Toast.LENGTH_LONG).show();
                                     }
 
 
@@ -140,5 +142,8 @@ public class CadastroPedido extends AppCompatActivity {
         });
 
 
+
+
     }
+
 }
