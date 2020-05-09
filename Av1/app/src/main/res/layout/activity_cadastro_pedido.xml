@@ -10,25 +10,31 @@
         android:id="@+id/sistema"
         android:layout_width="181dp"
         android:layout_height="36dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="Sistema de pedidos"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/status"
         android:layout_width="0dp"
         android:layout_height="31dp"
+<<<<<<< HEAD
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/listaPedidos"
+=======
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/listaVendas"
+>>>>>>> MatheusDev
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/sistema"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listaPedidos"
-        android:layout_width="363dp"
-        android:layout_height="589dp"
+        android:id="@+id/listaVendas"
+        android:layout_width="386dp"
+        android:layout_height="595dp"
         android:addStatesFromChildren="false"
         app:layout_constraintBottom_toTopOf="@+id/btSalvar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +47,7 @@
         android:id="@+id/btSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
