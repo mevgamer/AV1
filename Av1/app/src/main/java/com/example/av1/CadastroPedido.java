@@ -29,8 +29,8 @@ public class CadastroPedido extends AppCompatActivity {
             "345234","5234234","6456456","456457456",
             "456456","456456456","123123","152423","11234",
             "123123123","1231234123","312313","12312312",
-            "12312313","123123","123123","12312312","123123 (SE)",
-            "1231233 (TO)"};
+            "12312313","123123","123123","12312312","123123",
+            "1231233"};
     private float[] valorPedido = {256,10123,402,103,102,101,104,105,106,107,180,910,100,109,108,104,103,102,110,110,120,310,410,105,160,170,810};
     private float verificacao;
     private String valorAtual;
@@ -44,7 +44,7 @@ public class CadastroPedido extends AppCompatActivity {
 
         swStatus = findViewById(R.id.sistema);
         salvar = findViewById(R.id.salvar);
-        lista = findViewById(R.id.listaPedidos);
+        lista = findViewById(R.id.listaVendas);
         status = findViewById(R.id.status);
         status.setText("Offline");
 
